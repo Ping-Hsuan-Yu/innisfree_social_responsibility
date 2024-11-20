@@ -1,0 +1,402 @@
+@use "sass:math";
+@use "sass:list";
+
+@function clampCalc($max, $min) {
+    $val: #{math.div($max, 12.8)}vw;
+    @if ($max > 0) {
+        @return clamp(#{$min}px, $val, #{$max}px);
+    } @else {
+        @return clamp(#{$max}px, $val, #{$min}px);
+    }
+}
+
+$primary-color: #00b65d;
+$primary-color-dark: #004e31;
+$background-color: #dff1e0;
+$Noto-Sans-TC: "Noto Sans TC", sans-serif;
+
+#social-responsibility {
+    font-family: $Noto-Sans-TC;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: $background-color;
+    .fs-75px {
+        font-size: clampCalc(75, 24);
+    }
+    .fs-40px {
+        line-height: 1.575;
+        font-size: clampCalc(40, 20);
+    }
+    .fs-34px {
+        font-size: clampCalc(34, 16);
+    }
+    .fs-20px {
+        font-size: clampCalc(20, 14);
+    }
+    .leading-2\.5 {
+        line-height: 2.5;
+    }
+    .tracking-0\.3 {
+        letter-spacing: 0.3em;
+    }
+    .fw-medium {
+        font-weight: 500;
+    }
+    .fw-heavy {
+        font-weight: 700;
+    }
+    .text-white {
+        color: #fff;
+    }
+    .text-green {
+        color: $primary-color;
+    }
+    .text-dark-green {
+        color: $primary-color-dark;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .m-auto {
+        margin: auto;
+    }
+    .mt-auto {
+        margin-top: auto;
+    }
+    .mt-20px {
+        margin-top: clampCalc(20, 0);
+    }
+    .mt-36px {
+        margin-top: clampCalc(36, 0);
+    }
+    .mt-48px {
+        margin-top: clampCalc(48, 0);
+    }
+    .mt-52px {
+        margin-top: clampCalc(52, 0);
+    }
+    .mt-64px {
+        margin-top: clampCalc(64, 0);
+    }
+    .mt-72px {
+        margin-top: clampCalc(72, 0);
+    }
+    .px-36px {
+        padding-left: clampCalc(36, 0);
+        padding-right: clampCalc(36, 0);
+    }
+    .py-60px {
+        padding-top: clampCalc(60, 0);
+        padding-bottom: clampCalc(60, 0);
+    }
+    .py-50px {
+        padding-top: clampCalc(50, 0);
+        padding-bottom: clampCalc(50, 0);
+    }
+    .px-70px {
+        padding-left: clampCalc(70, 0);
+        padding-right: clampCalc(70, 0);
+    }
+    .w-100 {
+        width: 100%;
+    }
+    .rounded {
+        border-radius: clampCalc(10, 4);
+    }
+    .block {
+        display: block;
+    }
+    .flex {
+        display: flex;
+    }
+    .flex-col {
+        flex-direction: column;
+    }
+    .md\:flex-row {
+        @media (min-width: 640px) {
+            flex-direction: row;
+        }
+    }
+    .items-center {
+        align-items: center;
+    }
+    .md\:flex {
+        @media (min-width: 640px) {
+            display: flex;
+        }
+    }
+    .md\:items-center {
+        @media (min-width: 640px) {
+            align-items: center;
+        }
+    }
+    .md\:justify-center {
+        @media (min-width: 640px) {
+            justify-content: center;
+        }
+    }
+    .basis-1\/2 {
+        flex-basis: 50%;
+    }
+    .center {
+        display: flex;
+        > div {
+            margin: auto;
+        }
+    }
+    .header {
+        display: flex;
+        background-image: url("../assets/images/header-bg.png");
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: cover;
+        padding: 5.46875vw;
+        height: clamp(0px, 100vh, 100vw);
+        width: 100vw;
+    }
+    .paper {
+        width: clampCalc(1117, 0);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 3px 5px 3px 0px rgba(0, 182, 93, 0.19);
+        position: relative;
+        border-radius: 10px 0 10px 10px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 clampCalc(64, 0) clampCalc(58, 0) 0;
+            border-color: transparent $background-color transparent transparent;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 clampCalc(64, 0) clampCalc(58, 0) 0;
+            border-color: transparent transparent $primary-color transparent;
+        }
+        .paper-dog-eared {
+            position: absolute;
+            width: 10px;
+            height: clampCalc(58, 0);
+            top: 0;
+            right: -10px;
+            background-color: $background-color;
+        }
+    }
+
+    .title {
+        padding: clampCalc(36, 0) 0 clampCalc(54, 0) 0;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+    }
+    .title.title-green {
+        background-image: url("../assets/images/green-shield.svg");
+    }
+
+    .plant-tree {
+        .content {
+            .card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding-top: clampCalc(28, 8);
+                padding-bottom: clampCalc(28, 8);
+                padding-left: clampCalc(148, 0);
+                padding-right: clampCalc(148, 0);
+                background-color: $primary-color;
+                @media (max-width: 600px) {
+                    padding-left: clamp(0px, 3.5625vw, 148px);
+                    padding-right: clamp(0px, 3.5625vw, 148px);
+                }
+            }
+            .tree-number {
+                font-family: $Noto-Sans-TC;
+                font-size: clampCalc(185, 0);
+                position: relative;
+                &::after {
+                    content: "棵";
+                    position: absolute;
+                    bottom: clampCalc(-42, 0);
+                    right: clampCalc(-52, 0);
+                    font-size: clampCalc(55, 0);
+                }
+                .odometer-inside .odometer-digit {
+                    background-color: #fff;
+                    padding-right: clampCalc(12, 0);
+                    padding-left: clampCalc(18, 0);
+                    margin: 0 clampCalc(10, 0);
+                }
+                .odometer-formatting-mark {
+                    font-size: clampCalc(75, 0);
+                }
+                .odometer-value.odometer-last-value {
+                    left: 0;
+                    right: 0;
+                }
+            }
+            .countries {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-rows: repeat(4, auto);
+                grid-template-columns: repeat(2, auto);
+                row-gap: clampCalc(54, 0);
+                column-gap: clampCalc(76, 0);
+                width: min-content;
+                margin-top: clampCalc(83, 0);
+                .country {
+                    display: flex;
+                    align-items: center;
+                    gap: clampCalc(16, 0);
+                    width: min-content;
+                    .bar {
+                        height: 18px;
+                        width: clampCalc(338, 0);
+                        display: flex;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            color: $primary-color-dark;
+                            font-size: clampCalc(20, 14);
+                            top: clamp(-36px, calc(-1.5625vw - 16px), -16px);
+                        }
+                    }
+                    .bar-left {
+                        background-color: $primary-color-dark;
+                    }
+                    .bar-right {
+                        background-color: #b5d0b3;
+                    }
+                }
+                $country: (
+                    "中國": (
+                        1,
+                        75.5%
+                    ),
+                    "香港": (
+                        2,
+                        7%
+                    ),
+                    "泰國": (
+                        3,
+                        9%
+                    ),
+                    "台灣": (
+                        4,
+                        50%
+                    ),
+                    "馬來西亞": (
+                        5,
+                        1.2%
+                    ),
+                    "美國": (
+                        6,
+                        5%
+                    ),
+                    "印度": (
+                        7,
+                        1%
+                    ),
+                    "印尼": (
+                        8,
+                        6%
+                    )
+                );
+                @each $name, $data in $country {
+                    .country:nth-of-type(#{list.nth($data, 1)}) {
+                        .bar::before {
+                            content: $name;
+                        }
+                        .bar-left {
+                            width: #{list.nth($data, 2)};
+                        }
+                        .bar-right {
+                            width: calc(100% - #{list.nth($data, 2)});
+                        }
+                    }
+                }
+                .country:nth-of-type(4) {
+                    .bar-left {
+                        background-color: #f67d01;
+                    }
+                    .bar-right {
+                        background-color: #f0e7dd;
+                    }
+                }
+            }
+        }
+    }
+    .tree-sketch {
+        position: absolute;
+        img {
+            width: clampCalc(269, 0);
+            position: absolute;
+            top: clampCalc(-191, 0);
+            left: 10vw;
+        }
+    }
+
+    .recycle {
+        .card {
+            border: 2px solid #010101;
+            position: relative;
+            padding-top: clampCalc(28, 0);
+            padding-bottom: clampCalc(8, 0);
+            padding-left: clampCalc(48, 0);
+            padding-right: clampCalc(48, 0);
+            p:nth-of-type(1) {
+                position: absolute;
+                background-color: $background-color;
+                padding: 0 clampCalc(10, 0);
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -60%);
+                white-space: nowrap;
+            }
+            .bottle-number {
+                margin-bottom: clampCalc(8, 0);
+            }
+        }
+        .bar-chart {
+            display: flex;
+            align-items: end;
+            gap: clampCalc(4, 0);
+            @media (min-width: 640px) {
+                gap: clampCalc(96, 0);
+            }
+            @media (min-width: 768px) {
+                gap: clampCalc(128, 0);
+            }
+            .bar {
+                .number {
+                    background-color: $primary-color;
+                    position: relative;
+                    padding: clampCalc(4, 0) clampCalc(8, 0);
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border-color: $primary-color transparent transparent transparent;
+                        border-width: 10px;
+                        border-style: solid;
+                        bottom: -24px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                img {
+                    width: clampCalc(116, 0);
+                    margin: 24px 0 20px 0;
+                }
+            }
+        }
+    }
+}

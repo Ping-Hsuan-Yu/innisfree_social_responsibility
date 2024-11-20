@@ -1,0 +1,407 @@
+@charset "UTF-8";
+#social-responsibility {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #dff1e0;
+}
+#social-responsibility .fs-75px {
+  font-size: clamp(24px, 5.859375vw, 75px);
+}
+#social-responsibility .fs-40px {
+  line-height: 1.575;
+  font-size: clamp(20px, 3.125vw, 40px);
+}
+#social-responsibility .fs-34px {
+  font-size: clamp(16px, 2.65625vw, 34px);
+}
+#social-responsibility .fs-20px {
+  font-size: clamp(14px, 1.5625vw, 20px);
+}
+#social-responsibility .leading-2\.5 {
+  line-height: 2.5;
+}
+#social-responsibility .tracking-0\.3 {
+  letter-spacing: 0.3em;
+}
+#social-responsibility .fw-medium {
+  font-weight: 500;
+}
+#social-responsibility .fw-heavy {
+  font-weight: 700;
+}
+#social-responsibility .text-white {
+  color: #fff;
+}
+#social-responsibility .text-green {
+  color: #00b65d;
+}
+#social-responsibility .text-dark-green {
+  color: #004e31;
+}
+#social-responsibility .text-center {
+  text-align: center;
+}
+#social-responsibility .m-auto {
+  margin: auto;
+}
+#social-responsibility .mt-auto {
+  margin-top: auto;
+}
+#social-responsibility .mt-20px {
+  margin-top: clamp(0px, 1.5625vw, 20px);
+}
+#social-responsibility .mt-36px {
+  margin-top: clamp(0px, 2.8125vw, 36px);
+}
+#social-responsibility .mt-48px {
+  margin-top: clamp(0px, 3.75vw, 48px);
+}
+#social-responsibility .mt-52px {
+  margin-top: clamp(0px, 4.0625vw, 52px);
+}
+#social-responsibility .mt-64px {
+  margin-top: clamp(0px, 5vw, 64px);
+}
+#social-responsibility .mt-72px {
+  margin-top: clamp(0px, 5.625vw, 72px);
+}
+#social-responsibility .px-36px {
+  padding-left: clamp(0px, 2.8125vw, 36px);
+  padding-right: clamp(0px, 2.8125vw, 36px);
+}
+#social-responsibility .py-60px {
+  padding-top: clamp(0px, 4.6875vw, 60px);
+  padding-bottom: clamp(0px, 4.6875vw, 60px);
+}
+#social-responsibility .py-50px {
+  padding-top: clamp(0px, 3.90625vw, 50px);
+  padding-bottom: clamp(0px, 3.90625vw, 50px);
+}
+#social-responsibility .px-70px {
+  padding-left: clamp(0px, 5.46875vw, 70px);
+  padding-right: clamp(0px, 5.46875vw, 70px);
+}
+#social-responsibility .w-100 {
+  width: 100%;
+}
+#social-responsibility .rounded {
+  border-radius: clamp(4px, 0.78125vw, 10px);
+}
+#social-responsibility .block {
+  display: block;
+}
+#social-responsibility .flex {
+  display: flex;
+}
+#social-responsibility .flex-col {
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  #social-responsibility .md\:flex-row {
+    flex-direction: row;
+  }
+}
+#social-responsibility .items-center {
+  align-items: center;
+}
+@media (min-width: 640px) {
+  #social-responsibility .md\:flex {
+    display: flex;
+  }
+}
+@media (min-width: 640px) {
+  #social-responsibility .md\:items-center {
+    align-items: center;
+  }
+}
+@media (min-width: 640px) {
+  #social-responsibility .md\:justify-center {
+    justify-content: center;
+  }
+}
+#social-responsibility .basis-1\/2 {
+  flex-basis: 50%;
+}
+#social-responsibility .center {
+  display: flex;
+}
+#social-responsibility .center > div {
+  margin: auto;
+}
+#social-responsibility .header {
+  display: flex;
+  background-image: url("../assets/images/header-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  padding: 5.46875vw;
+  height: clamp(0px, 100vh, 100vw);
+  width: 100vw;
+}
+#social-responsibility .paper {
+  width: clamp(0px, 87.265625vw, 1117px);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 5px 3px 0px rgba(0, 182, 93, 0.19);
+  position: relative;
+  border-radius: 10px 0 10px 10px;
+}
+#social-responsibility .paper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 clamp(0px, 5vw, 64px) clamp(0px, 4.53125vw, 58px) 0;
+  border-color: transparent #dff1e0 transparent transparent;
+}
+#social-responsibility .paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 clamp(0px, 5vw, 64px) clamp(0px, 4.53125vw, 58px) 0;
+  border-color: transparent transparent #00b65d transparent;
+}
+#social-responsibility .paper .paper-dog-eared {
+  position: absolute;
+  width: 10px;
+  height: clamp(0px, 4.53125vw, 58px);
+  top: 0;
+  right: -10px;
+  background-color: #dff1e0;
+}
+#social-responsibility .title {
+  padding: clamp(0px, 2.8125vw, 36px) 0 clamp(0px, 4.21875vw, 54px) 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+#social-responsibility .title.title-green {
+  background-image: url("../assets/images/green-shield.svg");
+}
+#social-responsibility .plant-tree .content .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: clamp(8px, 2.1875vw, 28px);
+  padding-bottom: clamp(8px, 2.1875vw, 28px);
+  padding-left: clamp(0px, 11.5625vw, 148px);
+  padding-right: clamp(0px, 11.5625vw, 148px);
+  background-color: #00b65d;
+}
+@media (max-width: 600px) {
+  #social-responsibility .plant-tree .content .card {
+    padding-left: clamp(0px, 3.5625vw, 148px);
+    padding-right: clamp(0px, 3.5625vw, 148px);
+  }
+}
+#social-responsibility .plant-tree .content .tree-number {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: clamp(0px, 14.453125vw, 185px);
+  position: relative;
+}
+#social-responsibility .plant-tree .content .tree-number::after {
+  content: "棵";
+  position: absolute;
+  bottom: clamp(-42px, -3.28125vw, 0px);
+  right: clamp(-52px, -4.0625vw, 0px);
+  font-size: clamp(0px, 4.296875vw, 55px);
+}
+#social-responsibility .plant-tree .content .tree-number .odometer-inside .odometer-digit {
+  background-color: #fff;
+  padding-right: clamp(0px, 0.9375vw, 12px);
+  padding-left: clamp(0px, 1.40625vw, 18px);
+  margin: 0 clamp(0px, 0.78125vw, 10px);
+}
+#social-responsibility .plant-tree .content .tree-number .odometer-formatting-mark {
+  font-size: clamp(0px, 5.859375vw, 75px);
+}
+#social-responsibility .plant-tree .content .tree-number .odometer-value.odometer-last-value {
+  left: 0;
+  right: 0;
+}
+#social-responsibility .plant-tree .content .countries {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
+  row-gap: clamp(0px, 4.21875vw, 54px);
+  -moz-column-gap: clamp(0px, 5.9375vw, 76px);
+       column-gap: clamp(0px, 5.9375vw, 76px);
+  width: -moz-min-content;
+  width: min-content;
+  margin-top: clamp(0px, 6.484375vw, 83px);
+}
+#social-responsibility .plant-tree .content .countries .country {
+  display: flex;
+  align-items: center;
+  gap: clamp(0px, 1.25vw, 16px);
+  width: -moz-min-content;
+  width: min-content;
+}
+#social-responsibility .plant-tree .content .countries .country .bar {
+  height: 18px;
+  width: clamp(0px, 26.40625vw, 338px);
+  display: flex;
+  position: relative;
+}
+#social-responsibility .plant-tree .content .countries .country .bar::before {
+  position: absolute;
+  color: #004e31;
+  font-size: clamp(14px, 1.5625vw, 20px);
+  top: clamp(-36px, -1.5625vw - 16px, -16px);
+}
+#social-responsibility .plant-tree .content .countries .country .bar-left {
+  background-color: #004e31;
+}
+#social-responsibility .plant-tree .content .countries .country .bar-right {
+  background-color: #b5d0b3;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(1) .bar::before {
+  content: "中國";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(1) .bar-left {
+  width: 75.5%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(1) .bar-right {
+  width: calc(100% - 75.5%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(2) .bar::before {
+  content: "香港";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(2) .bar-left {
+  width: 7%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(2) .bar-right {
+  width: calc(100% - 7%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(3) .bar::before {
+  content: "泰國";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(3) .bar-left {
+  width: 9%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(3) .bar-right {
+  width: calc(100% - 9%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(4) .bar::before {
+  content: "台灣";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(4) .bar-left {
+  width: 50%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(4) .bar-right {
+  width: calc(100% - 50%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(5) .bar::before {
+  content: "馬來西亞";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(5) .bar-left {
+  width: 1.2%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(5) .bar-right {
+  width: calc(100% - 1.2%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(6) .bar::before {
+  content: "美國";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(6) .bar-left {
+  width: 5%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(6) .bar-right {
+  width: calc(100% - 5%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(7) .bar::before {
+  content: "印度";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(7) .bar-left {
+  width: 1%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(7) .bar-right {
+  width: calc(100% - 1%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(8) .bar::before {
+  content: "印尼";
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(8) .bar-left {
+  width: 6%;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(8) .bar-right {
+  width: calc(100% - 6%);
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(4) .bar-left {
+  background-color: #f67d01;
+}
+#social-responsibility .plant-tree .content .countries .country:nth-of-type(4) .bar-right {
+  background-color: #f0e7dd;
+}
+#social-responsibility .tree-sketch {
+  position: absolute;
+}
+#social-responsibility .tree-sketch img {
+  width: clamp(0px, 21.015625vw, 269px);
+  position: absolute;
+  top: clamp(-191px, -14.921875vw, 0px);
+  left: 10vw;
+}
+#social-responsibility .recycle .card {
+  border: 2px solid #010101;
+  position: relative;
+  padding-top: clamp(0px, 2.1875vw, 28px);
+  padding-bottom: clamp(0px, 0.625vw, 8px);
+  padding-left: clamp(0px, 3.75vw, 48px);
+  padding-right: clamp(0px, 3.75vw, 48px);
+}
+#social-responsibility .recycle .card p:nth-of-type(1) {
+  position: absolute;
+  background-color: #dff1e0;
+  padding: 0 clamp(0px, 0.78125vw, 10px);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  white-space: nowrap;
+}
+#social-responsibility .recycle .card .bottle-number {
+  margin-bottom: clamp(0px, 0.625vw, 8px);
+}
+#social-responsibility .recycle .bar-chart {
+  display: flex;
+  align-items: end;
+  gap: clamp(0px, 0.3125vw, 4px);
+}
+@media (min-width: 640px) {
+  #social-responsibility .recycle .bar-chart {
+    gap: clamp(0px, 7.5vw, 96px);
+  }
+}
+@media (min-width: 768px) {
+  #social-responsibility .recycle .bar-chart {
+    gap: clamp(0px, 10vw, 128px);
+  }
+}
+#social-responsibility .recycle .bar-chart .bar .number {
+  background-color: #00b65d;
+  position: relative;
+  padding: clamp(0px, 0.3125vw, 4px) clamp(0px, 0.625vw, 8px);
+}
+#social-responsibility .recycle .bar-chart .bar .number::before {
+  content: "";
+  position: absolute;
+  border-color: #00b65d transparent transparent transparent;
+  border-width: 10px;
+  border-style: solid;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#social-responsibility .recycle .bar-chart .bar img {
+  width: clamp(0px, 9.0625vw, 116px);
+  margin: 24px 0 20px 0;
+}/*# sourceMappingURL=style.css.map */
