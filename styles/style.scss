@@ -10,12 +10,18 @@
     }
 }
 
+@font-face {
+    font-family: "Fluffy";
+    src: url("/assets/fonts/Innisfree-Fluffy-Monospaced-Font.ttf");
+}
+
 $primary-color: #00b65d;
 $primary-color-dark: #004e31;
 $background-color: #dff1e0;
 $Noto-Sans-TC: "Noto Sans TC", sans-serif;
 
 #social-responsibility {
+    line-height: initial;
     font-family: $Noto-Sans-TC;
     font-optical-sizing: auto;
     font-style: normal;
@@ -35,6 +41,9 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     }
     .leading-2\.5 {
         line-height: 2.5;
+    }
+    .leading-2 {
+        line-height: 2;
     }
     .tracking-0\.3 {
         letter-spacing: 0.3em;
@@ -120,6 +129,9 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     .items-center {
         align-items: center;
     }
+    .justify-center {
+        justify-content: center;
+    }
     .md\:flex {
         @media (min-width: 640px) {
             display: flex;
@@ -138,6 +150,9 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     .basis-1\/2 {
         flex-basis: 50%;
     }
+    .gap-4 {
+        gap: 1rem;
+    }
     .center {
         display: flex;
         > div {
@@ -152,10 +167,8 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
         background-size: cover;
         padding: 5.46875vw;
         height: clamp(0px, 100vh, 100vw);
-        width: 100vw;
     }
     .paper {
-        width: clampCalc(1117, 0);
         background-color: rgb(255, 255, 255);
         box-shadow: 3px 5px 3px 0px rgba(0, 182, 93, 0.19);
         position: relative;
@@ -199,7 +212,13 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
         background-size: cover;
     }
     .title.title-green {
-        background-image: url("../assets/images/green-shield.svg");
+        background-image: url("../assets/images/green-shield.png");
+    }
+    .title.title-orange {
+        background-image: url("../assets/images/orange-shield.png");
+    }
+    .card {
+        background-color: $primary-color;
     }
 
     .plant-tree {
@@ -211,9 +230,8 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
                 gap: 8px;
                 padding-top: clampCalc(28, 8);
                 padding-bottom: clampCalc(28, 8);
-                padding-left: clampCalc(148, 0);
-                padding-right: clampCalc(148, 0);
-                background-color: $primary-color;
+                padding-left: clampCalc(180, 0);
+                padding-right: clampCalc(180, 0);
                 @media (max-width: 600px) {
                     padding-left: clamp(0px, 3.5625vw, 148px);
                     padding-right: clamp(0px, 3.5625vw, 148px);
@@ -243,6 +261,9 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
                     left: 0;
                     right: 0;
                 }
+            }
+            .paper {
+                width: clampCalc(1117, 0);
             }
             .countries {
                 display: grid;
@@ -346,7 +367,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     }
 
     .recycle {
-        .card {
+        .box {
             border: 2px solid #010101;
             position: relative;
             padding-top: clampCalc(28, 0);
@@ -396,6 +417,180 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
                     width: clampCalc(116, 0);
                     margin: 24px 0 20px 0;
                 }
+            }
+        }
+        .video {
+            max-width: 558px;
+        }
+        .paper {
+            max-width: 558px;
+        }
+        .card {
+            width: clampCalc(909, 0);
+            padding-top: clampCalc(20, 8);
+            padding-bottom: clampCalc(20, 8);
+        }
+        .recycle-process {
+            width: clampCalc(868, 0);
+            position: relative;
+            .text {
+                position: absolute;
+                top: 53%;
+                left: 51%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .steps {
+            p {
+                margin-bottom: 0.5em;
+                span {
+                    background-color: $primary-color;
+                    display: inline-block;
+                    padding: 0 0.5em;
+                    margin-right: 0.5em;
+                }
+            }
+        }
+        ul li {
+            list-style-type: initial;
+            line-height: 1.5;
+            margin-bottom: 1em;
+            &::marker {
+                color: $primary-color-dark;
+            }
+        }
+        .footer {
+            display: flex;
+            align-items: stretch;
+            img {
+                width: clampCalc(63, 0);
+                object-fit: contain;
+            }
+            div {
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                p {
+                    // white-space: nowrap;
+                    padding: 0 1em;
+                }
+            }
+        }
+    }
+
+    .edan {
+        background-color: #ffe9d3;
+        .content {
+            p:nth-of-type(1) {
+                display: none;
+                @media (min-width: 800px) {
+                    display: block;
+                }
+            }
+            p:nth-of-type(2) {
+                @media (min-width: 800px) {
+                    display: none;
+                }
+            }
+        }
+        .text-gray {
+            color: #5d5d5d;
+        }
+        .note-with-swiper {
+            width: 100%;
+            @media (min-width: 640px) {
+                max-width: 1155px;
+            }
+            .sticky-notes {
+                flex-basis: 40%;
+                font-family: "Fluffy";
+                position: relative;
+                max-width: 477px;
+                .year {
+                    position: absolute;
+                    top: 5%;
+                    left: 45%;
+                    font-size: clampCalc(111, 80);
+                    @media (min-width: 640px) {
+                        top: 1%;
+                        font-size: clampCalc(111, 0);
+                    }
+                    letter-spacing: -0.48em;
+                    color: #f67d01;
+                    transform: translateX(-60%) rotate(-5deg);
+                }
+                .content {
+                    position: absolute;
+                    top: 20%;
+                    transform: rotate(-5deg);
+                    font-size: clampCalc(34, 26);
+                    @media (min-width: 640px) {
+                        top: 16%;
+                        font-size: clampCalc(34, 0);
+                    }
+                    letter-spacing: -0.24em;
+                    line-height: 1.2;
+                    color: #7e5f6c;
+                    padding: 0.8em;
+                }
+            }
+            .sticky-notes + div {
+                @media (min-width: 640px) {
+                    flex-basis: 60%;
+                    max-width: 643px;
+                }
+                width: 100%;
+            }
+        }
+        .swiper {
+            @media (min-width: 640px) {
+                width: clampCalc(643, 0);
+            }
+            width: 100%;
+        }
+        .swiper-pagination {
+            bottom: clampCalc(-20, 0);
+            position: relative;
+            background-color: #f67d01;
+            max-height: 6px;
+            height: 0.46875vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .swiper-pagination-bullet {
+            background-image: url("/assets/images/heart.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            width: clampCalc(31, 0);
+            height: clampCalc(27, 0);
+            // --swiper-pagination-bullet-width: 31px;
+            // --swiper-pagination-bullet-height: 27px;
+            --swiper-pagination-bullet-inactive-color: transparent;
+            --swiper-pagination-bullet-inactive-opacity: 1;
+            --swiper-pagination-bullet-border-radius: 0;
+            position: relative;
+            > div {
+                display: none;
+                font-size: clampCalc(24, 16);
+                color: #f67d01;
+                font-weight: 900;
+                position: absolute;
+                bottom: clampCalc(-36, -20);
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background-image: url("/assets/images/heart-active.png");
+            width: clampCalc(43, 0);
+            height: clampCalc(39, 0);
+            // --swiper-pagination-bullet-width: 43px;
+            // --swiper-pagination-bullet-height: 39px;
+            --swiper-pagination-color: transparent;
+            > div {
+                display: block;
             }
         }
     }

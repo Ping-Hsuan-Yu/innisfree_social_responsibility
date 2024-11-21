@@ -1,5 +1,10 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Fluffy";
+  src: url("/assets/fonts/Innisfree-Fluffy-Monospaced-Font.ttf");
+}
 #social-responsibility {
+  line-height: initial;
   font-family: "Noto Sans TC", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -20,6 +25,9 @@
 }
 #social-responsibility .leading-2\.5 {
   line-height: 2.5;
+}
+#social-responsibility .leading-2 {
+  line-height: 2;
 }
 #social-responsibility .tracking-0\.3 {
   letter-spacing: 0.3em;
@@ -105,6 +113,9 @@
 #social-responsibility .items-center {
   align-items: center;
 }
+#social-responsibility .justify-center {
+  justify-content: center;
+}
 @media (min-width: 640px) {
   #social-responsibility .md\:flex {
     display: flex;
@@ -123,6 +134,9 @@
 #social-responsibility .basis-1\/2 {
   flex-basis: 50%;
 }
+#social-responsibility .gap-4 {
+  gap: 1rem;
+}
 #social-responsibility .center {
   display: flex;
 }
@@ -137,10 +151,8 @@
   background-size: cover;
   padding: 5.46875vw;
   height: clamp(0px, 100vh, 100vw);
-  width: 100vw;
 }
 #social-responsibility .paper {
-  width: clamp(0px, 87.265625vw, 1117px);
   background-color: rgb(255, 255, 255);
   box-shadow: 3px 5px 3px 0px rgba(0, 182, 93, 0.19);
   position: relative;
@@ -183,7 +195,13 @@
   background-size: cover;
 }
 #social-responsibility .title.title-green {
-  background-image: url("../assets/images/green-shield.svg");
+  background-image: url("../assets/images/green-shield.png");
+}
+#social-responsibility .title.title-orange {
+  background-image: url("../assets/images/orange-shield.png");
+}
+#social-responsibility .card {
+  background-color: #00b65d;
 }
 #social-responsibility .plant-tree .content .card {
   display: flex;
@@ -192,9 +210,8 @@
   gap: 8px;
   padding-top: clamp(8px, 2.1875vw, 28px);
   padding-bottom: clamp(8px, 2.1875vw, 28px);
-  padding-left: clamp(0px, 11.5625vw, 148px);
-  padding-right: clamp(0px, 11.5625vw, 148px);
-  background-color: #00b65d;
+  padding-left: clamp(0px, 14.0625vw, 180px);
+  padding-right: clamp(0px, 14.0625vw, 180px);
 }
 @media (max-width: 600px) {
   #social-responsibility .plant-tree .content .card {
@@ -226,6 +243,9 @@
 #social-responsibility .plant-tree .content .tree-number .odometer-value.odometer-last-value {
   left: 0;
   right: 0;
+}
+#social-responsibility .plant-tree .content .paper {
+  width: clamp(0px, 87.265625vw, 1117px);
 }
 #social-responsibility .plant-tree .content .countries {
   display: grid;
@@ -351,7 +371,7 @@
   top: clamp(-191px, -14.921875vw, 0px);
   left: 10vw;
 }
-#social-responsibility .recycle .card {
+#social-responsibility .recycle .box {
   border: 2px solid #010101;
   position: relative;
   padding-top: clamp(0px, 2.1875vw, 28px);
@@ -359,7 +379,7 @@
   padding-left: clamp(0px, 3.75vw, 48px);
   padding-right: clamp(0px, 3.75vw, 48px);
 }
-#social-responsibility .recycle .card p:nth-of-type(1) {
+#social-responsibility .recycle .box p:nth-of-type(1) {
   position: absolute;
   background-color: #dff1e0;
   padding: 0 clamp(0px, 0.78125vw, 10px);
@@ -368,7 +388,7 @@
   transform: translate(-50%, -60%);
   white-space: nowrap;
 }
-#social-responsibility .recycle .card .bottle-number {
+#social-responsibility .recycle .box .bottle-number {
   margin-bottom: clamp(0px, 0.625vw, 8px);
 }
 #social-responsibility .recycle .bar-chart {
@@ -404,4 +424,181 @@
 #social-responsibility .recycle .bar-chart .bar img {
   width: clamp(0px, 9.0625vw, 116px);
   margin: 24px 0 20px 0;
+}
+#social-responsibility .recycle .video {
+  max-width: 558px;
+}
+#social-responsibility .recycle .paper {
+  max-width: 558px;
+}
+#social-responsibility .recycle .card {
+  width: clamp(0px, 71.015625vw, 909px);
+  padding-top: clamp(8px, 1.5625vw, 20px);
+  padding-bottom: clamp(8px, 1.5625vw, 20px);
+}
+#social-responsibility .recycle .recycle-process {
+  width: clamp(0px, 67.8125vw, 868px);
+  position: relative;
+}
+#social-responsibility .recycle .recycle-process .text {
+  position: absolute;
+  top: 53%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+#social-responsibility .recycle .steps p {
+  margin-bottom: 0.5em;
+}
+#social-responsibility .recycle .steps p span {
+  background-color: #00b65d;
+  display: inline-block;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+}
+#social-responsibility .recycle ul li {
+  list-style-type: initial;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+#social-responsibility .recycle ul li::marker {
+  color: #004e31;
+}
+#social-responsibility .recycle .footer {
+  display: flex;
+  align-items: stretch;
+}
+#social-responsibility .recycle .footer img {
+  width: clamp(0px, 4.921875vw, 63px);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#social-responsibility .recycle .footer div {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+#social-responsibility .recycle .footer div p {
+  padding: 0 1em;
+}
+#social-responsibility .edan {
+  background-color: #ffe9d3;
+}
+#social-responsibility .edan .content p:nth-of-type(1) {
+  display: none;
+}
+@media (min-width: 800px) {
+  #social-responsibility .edan .content p:nth-of-type(1) {
+    display: block;
+  }
+}
+@media (min-width: 800px) {
+  #social-responsibility .edan .content p:nth-of-type(2) {
+    display: none;
+  }
+}
+#social-responsibility .edan .text-gray {
+  color: #5d5d5d;
+}
+#social-responsibility .edan .note-with-swiper {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  #social-responsibility .edan .note-with-swiper {
+    max-width: 1155px;
+  }
+}
+#social-responsibility .edan .note-with-swiper .sticky-notes {
+  flex-basis: 40%;
+  font-family: "Fluffy";
+  position: relative;
+  max-width: 477px;
+}
+#social-responsibility .edan .note-with-swiper .sticky-notes .year {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  font-size: clamp(80px, 8.671875vw, 111px);
+  letter-spacing: -0.48em;
+  color: #f67d01;
+  transform: translateX(-60%) rotate(-5deg);
+}
+@media (min-width: 640px) {
+  #social-responsibility .edan .note-with-swiper .sticky-notes .year {
+    top: 1%;
+    font-size: clamp(0px, 8.671875vw, 111px);
+  }
+}
+#social-responsibility .edan .note-with-swiper .sticky-notes .content {
+  position: absolute;
+  top: 20%;
+  transform: rotate(-5deg);
+  font-size: clamp(26px, 2.65625vw, 34px);
+  letter-spacing: -0.24em;
+  line-height: 1.2;
+  color: #7e5f6c;
+  padding: 0.8em;
+}
+@media (min-width: 640px) {
+  #social-responsibility .edan .note-with-swiper .sticky-notes .content {
+    top: 16%;
+    font-size: clamp(0px, 2.65625vw, 34px);
+  }
+}
+#social-responsibility .edan .note-with-swiper .sticky-notes + div {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  #social-responsibility .edan .note-with-swiper .sticky-notes + div {
+    flex-basis: 60%;
+    max-width: 643px;
+  }
+}
+#social-responsibility .edan .swiper {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  #social-responsibility .edan .swiper {
+    width: clamp(0px, 50.234375vw, 643px);
+  }
+}
+#social-responsibility .edan .swiper-pagination {
+  bottom: clamp(-20px, -1.5625vw, 0px);
+  position: relative;
+  background-color: #f67d01;
+  max-height: 6px;
+  height: 0.46875vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#social-responsibility .edan .swiper-pagination-bullet {
+  background-image: url("/assets/images/heart.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: clamp(0px, 2.421875vw, 31px);
+  height: clamp(0px, 2.109375vw, 27px);
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-border-radius: 0;
+  position: relative;
+}
+#social-responsibility .edan .swiper-pagination-bullet > div {
+  display: none;
+  font-size: clamp(16px, 1.875vw, 24px);
+  color: #f67d01;
+  font-weight: 900;
+  position: absolute;
+  bottom: clamp(-36px, -2.8125vw, -20px);
+  left: 50%;
+  transform: translate(-50%);
+}
+#social-responsibility .edan .swiper-pagination-bullet-active {
+  background-image: url("/assets/images/heart-active.png");
+  width: clamp(0px, 3.359375vw, 43px);
+  height: clamp(0px, 3.046875vw, 39px);
+  --swiper-pagination-color: transparent;
+}
+#social-responsibility .edan .swiper-pagination-bullet-active > div {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
