@@ -193,7 +193,7 @@
   background-position: bottom right;
   background-size: cover;
   padding: 5.46875vw;
-  height: clamp(0px, 100vh, 100vw);
+  height: 100dvh;
 }
 #social-responsibility .paper {
   background-color: rgb(255, 255, 255);
@@ -663,7 +663,7 @@
   display: block;
 }
 #social-responsibility .edan .join {
-  width: clamp(0px, 50.703125vw, 649px);
+  width: clamp(300px, 50.703125vw, 649px);
   margin-top: clamp(0px, 9.375vw, 120px);
   margin-bottom: clamp(0px, 3.75vw, 48px);
 }

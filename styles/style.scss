@@ -209,7 +209,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
         background-position: bottom right;
         background-size: cover;
         padding: 5.46875vw;
-        height: clamp(0px, 100vh, 100vw);
+        height: 100dvh;
     }
     .paper {
         background-color: rgb(255, 255, 255);
@@ -646,7 +646,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             }
         }
         .join {
-            width: clampCalc(649, 0);
+            width: clampCalc(649, 300);
             margin-top: clampCalc(120, 0);
             margin-bottom: clampCalc(48, 0);
         }
