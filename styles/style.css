@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Fluffy";
-  src: url("/assets/fonts/Innisfree-Fluffy-Monospaced-Font.ttf");
+  src: url("../assets/fonts/Innisfree-Fluffy-Monospaced-Font.ttf");
 }
 #social-responsibility {
   line-height: initial;
@@ -631,7 +631,7 @@
   }
 }
 #social-responsibility .edan .swiper-pagination-bullet {
-  background-image: url("/assets/images/heart.png");
+  background-image: url("../assets/images/heart.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -654,7 +654,7 @@
   transform: translate(-50%);
 }
 #social-responsibility .edan .swiper-pagination-bullet-active {
-  background-image: url("/assets/images/heart-active.png");
+  background-image: url("../assets/images/heart-active.png");
   width: clamp(0px, 3.359375vw, 43px);
   height: clamp(0px, 3.046875vw, 39px);
   --swiper-pagination-color: transparent;
@@ -667,62 +667,62 @@
   margin-top: clamp(0px, 9.375vw, 120px);
   margin-bottom: clamp(0px, 3.75vw, 48px);
 }
-#social-responsibility .enviroment .cards {
+#social-responsibility .environment .cards {
   gap: clamp(16px, 3.125vw, 40px);
 }
-#social-responsibility .enviroment .cards > div {
+#social-responsibility .environment .cards > div {
   max-width: 1117px;
   width: 100%;
 }
-#social-responsibility .enviroment .cards .logo {
+#social-responsibility .environment .cards .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: clamp(0px, 21.09375vw, 270px);
 }
-#social-responsibility .enviroment .cards .vegan .pic,
-#social-responsibility .enviroment .cards .ocean .pic {
+#social-responsibility .environment .cards .vegan .pic,
+#social-responsibility .environment .cards .ocean .pic {
   width: clamp(0px, 33.59375vw, 430px);
   border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
 }
-#social-responsibility .enviroment .cards .vegan > .flex,
-#social-responsibility .enviroment .cards .ocean > .flex {
+#social-responsibility .environment .cards .vegan > .flex,
+#social-responsibility .environment .cards .ocean > .flex {
   padding: 26px 26px 26px 0;
 }
-#social-responsibility .enviroment .cards .vegan .logo img {
+#social-responsibility .environment .cards .vegan .logo img {
   width: clamp(0px, 11.875vw, 152px);
 }
-#social-responsibility .enviroment .cards .ocean .logo img {
+#social-responsibility .environment .cards .ocean .logo img {
   width: clamp(0px, 10.859375vw, 139px);
 }
-#social-responsibility .enviroment .cards .peta {
+#social-responsibility .environment .cards .peta {
   padding: 26px 26px 26px 0;
 }
-#social-responsibility .enviroment .cards .peta .logo img {
+#social-responsibility .environment .cards .peta .logo img {
   width: clamp(0px, 12.03125vw, 154px);
 }
-#social-responsibility .enviroment .cards .peta .text {
+#social-responsibility .environment .cards .peta .text {
   width: clamp(0px, 64.140625vw, 821px);
 }
-#social-responsibility .enviroment .cards .reduce .text,
-#social-responsibility .enviroment .cards .reuse .text {
+#social-responsibility .environment .cards .reduce .text,
+#social-responsibility .environment .cards .reuse .text {
   padding: 26px;
 }
 @media (min-width: 768px) {
-  #social-responsibility .enviroment .cards .reduce .text,
-  #social-responsibility .enviroment .cards .reuse .text {
+  #social-responsibility .environment .cards .reduce .text,
+  #social-responsibility .environment .cards .reuse .text {
     padding-left: clamp(0px, 4.0625vw, 52px);
     padding-right: clamp(0px, 2.03125vw, 26px);
   }
 }
-#social-responsibility .enviroment .cards .reduce .pic,
-#social-responsibility .enviroment .cards .reuse .pic {
+#social-responsibility .environment .cards .reduce .pic,
+#social-responsibility .environment .cards .reuse .pic {
   border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
 }
-#social-responsibility .enviroment .cards .reduce .pic {
+#social-responsibility .environment .cards .reduce .pic {
   width: clamp(0px, 36.25vw, 464px);
 }
-#social-responsibility .enviroment .cards .reuse .pic {
+#social-responsibility .environment .cards .reuse .pic {
   width: clamp(0px, 34.6875vw, 444px);
 }
 #social-responsibility .more {

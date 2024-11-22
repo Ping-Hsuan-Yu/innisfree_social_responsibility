@@ -614,7 +614,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             }
         }
         .swiper-pagination-bullet {
-            background-image: url("/assets/images/heart.png");
+            background-image: url("../assets/images/heart.png");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
@@ -637,11 +637,9 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             }
         }
         .swiper-pagination-bullet-active {
-            background-image: url("/assets/images/heart-active.png");
+            background-image: url("../assets/images/heart-active.png");
             width: clampCalc(43, 0);
             height: clampCalc(39, 0);
-            // --swiper-pagination-bullet-width: 43px;
-            // --swiper-pagination-bullet-height: 39px;
             --swiper-pagination-color: transparent;
             > div {
                 display: block;
@@ -654,7 +652,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
         }
     }
 
-    .enviroment {
+    .environment {
         .cards {
             gap: clampCalc(40, 16);
             > div {
