@@ -35,8 +35,11 @@
 #social-responsibility .fw-medium {
   font-weight: 500;
 }
-#social-responsibility .fw-heavy {
+#social-responsibility .fw-bold {
   font-weight: 700;
+}
+#social-responsibility .fw-heavy {
+  font-weight: 900;
 }
 #social-responsibility .text-white {
   color: #fff;
@@ -46,6 +49,9 @@
 }
 #social-responsibility .text-dark-green {
   color: #004e31;
+}
+#social-responsibility .text-gray {
+  color: #5d5d5d;
 }
 #social-responsibility .text-center {
   text-align: center;
@@ -99,13 +105,36 @@
 #social-responsibility .block {
   display: block;
 }
+#social-responsibility .d-none {
+  display: none;
+}
 #social-responsibility .flex {
   display: flex;
+}
+@media (min-width: 640px) {
+  #social-responsibility .sm\:block {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #social-responsibility .md\:block {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #social-responsibility .md\:d-none {
+    display: none;
+  }
 }
 #social-responsibility .flex-col {
   flex-direction: column;
 }
 @media (min-width: 640px) {
+  #social-responsibility .sm\:flex-row {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
   #social-responsibility .md\:flex-row {
     flex-direction: row;
   }
@@ -113,20 +142,31 @@
 #social-responsibility .items-center {
   align-items: center;
 }
+#social-responsibility .items-start {
+  align-items: flex-start;
+}
 #social-responsibility .justify-center {
   justify-content: center;
 }
-@media (min-width: 640px) {
+#social-responsibility .justify-between {
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
   #social-responsibility .md\:flex {
     display: flex;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 640) {
+  #social-responsibility .sm\:items-center {
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
   #social-responsibility .md\:items-center {
     align-items: center;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   #social-responsibility .md\:justify-center {
     justify-content: center;
   }
@@ -140,8 +180,11 @@
 #social-responsibility .center {
   display: flex;
 }
-#social-responsibility .center > div {
+#social-responsibility .center > * {
   margin: auto;
+}
+#social-responsibility .bg-white {
+  background-color: #fff;
 }
 #social-responsibility .header {
   display: flex;
@@ -496,13 +539,10 @@
     display: none;
   }
 }
-#social-responsibility .edan .text-gray {
-  color: #5d5d5d;
-}
 #social-responsibility .edan .note-with-swiper {
   width: 100%;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   #social-responsibility .edan .note-with-swiper {
     max-width: 1155px;
   }
@@ -511,7 +551,12 @@
   flex-basis: 40%;
   font-family: "Fluffy";
   position: relative;
-  max-width: 477px;
+}
+@media (min-width: 768px) {
+  #social-responsibility .edan .note-with-swiper .sticky-notes {
+    max-width: 477px;
+    align-self: end;
+  }
 }
 #social-responsibility .edan .note-with-swiper .sticky-notes .year {
   position: absolute;
@@ -522,7 +567,7 @@
   color: #f67d01;
   transform: translateX(-60%) rotate(-5deg);
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   #social-responsibility .edan .note-with-swiper .sticky-notes .year {
     top: 1%;
     font-size: clamp(0px, 8.671875vw, 111px);
@@ -536,9 +581,9 @@
   letter-spacing: -0.24em;
   line-height: 1.2;
   color: #7e5f6c;
-  padding: 0.8em;
+  padding: 0.8em 1.2em 0 0.8em;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   #social-responsibility .edan .note-with-swiper .sticky-notes .content {
     top: 16%;
     font-size: clamp(0px, 2.65625vw, 34px);
@@ -547,7 +592,7 @@
 #social-responsibility .edan .note-with-swiper .sticky-notes + div {
   width: 100%;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   #social-responsibility .edan .note-with-swiper .sticky-notes + div {
     flex-basis: 60%;
     max-width: 643px;
@@ -556,7 +601,7 @@
 #social-responsibility .edan .swiper {
   width: 100%;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   #social-responsibility .edan .swiper {
     width: clamp(0px, 50.234375vw, 643px);
   }
@@ -564,12 +609,26 @@
 #social-responsibility .edan .swiper-pagination {
   bottom: clamp(-20px, -1.5625vw, 0px);
   position: relative;
-  background-color: #f67d01;
-  max-height: 6px;
-  height: 0.46875vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-height: 6px;
+  height: 0.46875vw;
+}
+#social-responsibility .edan .swiper-pagination::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f67d01;
+  width: 96%;
+  max-height: 6px;
+  height: 0.46875vw;
+}
+@media (min-width: 768px) {
+  #social-responsibility .edan .swiper-pagination::after {
+    width: 90%;
+  }
 }
 #social-responsibility .edan .swiper-pagination-bullet {
   background-image: url("/assets/images/heart.png");
@@ -582,6 +641,7 @@
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-border-radius: 0;
   position: relative;
+  z-index: 1;
 }
 #social-responsibility .edan .swiper-pagination-bullet > div {
   display: none;
@@ -589,7 +649,7 @@
   color: #f67d01;
   font-weight: 900;
   position: absolute;
-  bottom: clamp(-36px, -2.8125vw, -20px);
+  bottom: clamp(-42px, -3.28125vw, -20px);
   left: 50%;
   transform: translate(-50%);
 }
@@ -601,4 +661,103 @@
 }
 #social-responsibility .edan .swiper-pagination-bullet-active > div {
   display: block;
+}
+#social-responsibility .edan .join {
+  width: clamp(0px, 50.703125vw, 649px);
+  margin-top: clamp(0px, 9.375vw, 120px);
+  margin-bottom: clamp(0px, 3.75vw, 48px);
+}
+#social-responsibility .enviroment .cards {
+  gap: clamp(16px, 3.125vw, 40px);
+}
+#social-responsibility .enviroment .cards > div {
+  max-width: 1117px;
+  width: 100%;
+}
+#social-responsibility .enviroment .cards .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(0px, 21.09375vw, 270px);
+}
+#social-responsibility .enviroment .cards .vegan .pic,
+#social-responsibility .enviroment .cards .ocean .pic {
+  width: clamp(0px, 33.59375vw, 430px);
+  border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
+}
+#social-responsibility .enviroment .cards .vegan > .flex,
+#social-responsibility .enviroment .cards .ocean > .flex {
+  padding: 26px 26px 26px 0;
+}
+#social-responsibility .enviroment .cards .vegan .logo img {
+  width: clamp(0px, 11.875vw, 152px);
+}
+#social-responsibility .enviroment .cards .ocean .logo img {
+  width: clamp(0px, 10.859375vw, 139px);
+}
+#social-responsibility .enviroment .cards .peta {
+  padding: 26px 26px 26px 0;
+}
+#social-responsibility .enviroment .cards .peta .logo img {
+  width: clamp(0px, 12.03125vw, 154px);
+}
+#social-responsibility .enviroment .cards .peta .text {
+  width: clamp(0px, 64.140625vw, 821px);
+}
+#social-responsibility .enviroment .cards .reduce .text,
+#social-responsibility .enviroment .cards .reuse .text {
+  padding: 26px;
+}
+@media (min-width: 768px) {
+  #social-responsibility .enviroment .cards .reduce .text,
+  #social-responsibility .enviroment .cards .reuse .text {
+    padding-left: clamp(0px, 4.0625vw, 52px);
+    padding-right: clamp(0px, 2.03125vw, 26px);
+  }
+}
+#social-responsibility .enviroment .cards .reduce .pic,
+#social-responsibility .enviroment .cards .reuse .pic {
+  border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
+}
+#social-responsibility .enviroment .cards .reduce .pic {
+  width: clamp(0px, 36.25vw, 464px);
+}
+#social-responsibility .enviroment .cards .reuse .pic {
+  width: clamp(0px, 34.6875vw, 444px);
+}
+#social-responsibility .more {
+  padding-bottom: clamp(0px, 2.8125vw, 36px);
+}
+#social-responsibility .more > p {
+  margin-top: clamp(0px, 5.625vw, 72px);
+  margin-bottom: clamp(0px, 2.8125vw, 36px);
+}
+#social-responsibility .more .flex {
+  gap: 4px;
+  justify-content: center;
+}
+#social-responsibility .more .flex .href:first-of-type {
+  background-image: url("../assets/images/about-us.png");
+}
+#social-responsibility .more .flex .href:last-of-type {
+  background-image: url("../assets/images/green-tea-heritage.png");
+}
+#social-responsibility .more .href {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: clamp(0px, 44.296875vw, 567px);
+  height: clamp(0px, 13.90625vw, 178px);
+  display: flex;
+  align-items: center;
+  padding-left: 1.5%;
+}
+#social-responsibility .more .href a span:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+#social-responsibility .more .href a span:last-of-type img {
+  margin-top: 1%;
+  max-width: 28px;
+  width: 2.1875vw;
 }/*# sourceMappingURL=style.css.map */

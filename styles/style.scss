@@ -51,8 +51,11 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     .fw-medium {
         font-weight: 500;
     }
-    .fw-heavy {
+    .fw-bold {
         font-weight: 700;
+    }
+    .fw-heavy {
+        font-weight: 900;
     }
     .text-white {
         color: #fff;
@@ -62,6 +65,9 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     }
     .text-dark-green {
         color: $primary-color-dark;
+    }
+    .text-gray {
+        color: #5d5d5d;
     }
     .text-center {
         text-align: center;
@@ -115,35 +121,69 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     .block {
         display: block;
     }
+    .d-none {
+        display: none;
+    }
     .flex {
         display: flex;
+    }
+    .sm\:block {
+        @media (min-width: 640px) {
+            display: block;
+        }
+    }
+    .md\:block {
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+    .md\:d-none {
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
     .flex-col {
         flex-direction: column;
     }
-    .md\:flex-row {
+    .sm\:flex-row {
         @media (min-width: 640px) {
+            flex-direction: row;
+        }
+    }
+    .md\:flex-row {
+        @media (min-width: 768px) {
             flex-direction: row;
         }
     }
     .items-center {
         align-items: center;
     }
+    .items-start {
+        align-items: flex-start;
+    }
     .justify-center {
         justify-content: center;
     }
+    .justify-between {
+        justify-content: space-between;
+    }
     .md\:flex {
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             display: flex;
         }
     }
+    .sm\:items-center {
+        @media (min-width: 640) {
+            align-items: center;
+        }
+    }
     .md\:items-center {
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             align-items: center;
         }
     }
     .md\:justify-center {
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             justify-content: center;
         }
     }
@@ -155,9 +195,12 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     }
     .center {
         display: flex;
-        > div {
+        > * {
             margin: auto;
         }
+    }
+    .bg-white {
+        background-color: #fff;
     }
     .header {
         display: flex;
@@ -493,25 +536,25 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
                 }
             }
         }
-        .text-gray {
-            color: #5d5d5d;
-        }
         .note-with-swiper {
             width: 100%;
-            @media (min-width: 640px) {
+            @media (min-width: 768px) {
                 max-width: 1155px;
             }
             .sticky-notes {
                 flex-basis: 40%;
                 font-family: "Fluffy";
                 position: relative;
-                max-width: 477px;
+                @media (min-width: 768px) {
+                    max-width: 477px;
+                    align-self: end;
+                }
                 .year {
                     position: absolute;
                     top: 5%;
                     left: 45%;
                     font-size: clampCalc(111, 80);
-                    @media (min-width: 640px) {
+                    @media (min-width: 768px) {
                         top: 1%;
                         font-size: clampCalc(111, 0);
                     }
@@ -524,18 +567,18 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
                     top: 20%;
                     transform: rotate(-5deg);
                     font-size: clampCalc(34, 26);
-                    @media (min-width: 640px) {
+                    @media (min-width: 768px) {
                         top: 16%;
                         font-size: clampCalc(34, 0);
                     }
                     letter-spacing: -0.24em;
                     line-height: 1.2;
                     color: #7e5f6c;
-                    padding: 0.8em;
+                    padding: 0.8em 1.2em 0 0.8em;
                 }
             }
             .sticky-notes + div {
-                @media (min-width: 640px) {
+                @media (min-width: 768px) {
                     flex-basis: 60%;
                     max-width: 643px;
                 }
@@ -543,7 +586,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             }
         }
         .swiper {
-            @media (min-width: 640px) {
+            @media (min-width: 768px) {
                 width: clampCalc(643, 0);
             }
             width: 100%;
@@ -551,12 +594,24 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
         .swiper-pagination {
             bottom: clampCalc(-20, 0);
             position: relative;
-            background-color: #f67d01;
-            max-height: 6px;
-            height: 0.46875vw;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            max-height: 6px;
+            height: 0.46875vw;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #f67d01;
+                width: 96%;
+                max-height: 6px;
+                height: 0.46875vw;
+                @media (min-width: 768px) {
+                    width: 90%;
+                }
+            }
         }
         .swiper-pagination-bullet {
             background-image: url("/assets/images/heart.png");
@@ -565,19 +620,18 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             background-position: center center;
             width: clampCalc(31, 0);
             height: clampCalc(27, 0);
-            // --swiper-pagination-bullet-width: 31px;
-            // --swiper-pagination-bullet-height: 27px;
             --swiper-pagination-bullet-inactive-color: transparent;
             --swiper-pagination-bullet-inactive-opacity: 1;
             --swiper-pagination-bullet-border-radius: 0;
             position: relative;
+            z-index: 1;
             > div {
                 display: none;
                 font-size: clampCalc(24, 16);
                 color: #f67d01;
                 font-weight: 900;
                 position: absolute;
-                bottom: clampCalc(-36, -20);
+                bottom: clampCalc(-42, -20);
                 left: 50%;
                 transform: translate(-50%);
             }
@@ -591,6 +645,120 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             --swiper-pagination-color: transparent;
             > div {
                 display: block;
+            }
+        }
+        .join {
+            width: clampCalc(649, 0);
+            margin-top: clampCalc(120, 0);
+            margin-bottom: clampCalc(48, 0);
+        }
+    }
+
+    .enviroment {
+        .cards {
+            gap: clampCalc(40, 16);
+            > div {
+                max-width: 1117px;
+                width: 100%;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: clampCalc(270, 0);
+            }
+            .vegan,
+            .ocean {
+                .pic {
+                    width: clampCalc(430, 0);
+                    border-radius: 0 clampCalc(10, 4) clampCalc(10, 4) 0;
+                }
+                > .flex {
+                    padding: 26px 26px 26px 0;
+                }
+            }
+            .vegan {
+                .logo img {
+                    width: clampCalc(152, 0);
+                }
+            }
+            .ocean {
+                .logo img {
+                    width: clampCalc(139, 0);
+                }
+            }
+            .peta {
+                padding: 26px 26px 26px 0;
+                .logo {
+                    img {
+                        width: clampCalc(154, 0);
+                    }
+                }
+                .text {
+                    width: clampCalc(821, 0);
+                }
+            }
+            .reduce,
+            .reuse {
+                .text {
+                    padding: 26px;
+                    @media (min-width: 768px) {
+                        padding-left: clampCalc(52, 0);
+                        padding-right: clampCalc(26, 0);
+                    }
+                }
+                .pic {
+                    border-radius: 0 clampCalc(10, 4) clampCalc(10, 4) 0;
+                }
+            }
+            .reduce {
+                .pic {
+                    width: clampCalc(464, 0);
+                }
+            }
+            .reuse {
+                .pic {
+                    width: clampCalc(444, 0);
+                }
+            }
+        }
+    }
+
+    .more {
+        padding-bottom: clampCalc(36, 0);
+        > p {
+            margin-top: clampCalc(72, 0);
+            margin-bottom: clampCalc(36, 0);
+        }
+        .flex {
+            gap: 4px;
+            justify-content: center;
+            .href:first-of-type {
+                background-image: url("../assets/images/about-us.png");
+            }
+            .href:last-of-type {
+                background-image: url("../assets/images/green-tea-heritage.png");
+            }
+        }
+        .href {
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: clampCalc(567, 0);
+            height: clampCalc(178, 0);
+            display: flex;
+            align-items: center;
+            padding-left: 1.5%;
+            a {
+                span:last-of-type {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    img {
+                        margin-top: 1%;
+                        max-width: 28px;
+                        width: 2.1875vw;
+                    }
+                }
             }
         }
     }

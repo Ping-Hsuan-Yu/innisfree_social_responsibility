@@ -399,8 +399,126 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="mt-20px swiper-pagination"></div>
             </div>
+          </div>
+        </div>
+        <div class="center">
+          <a class="join" href="/" target="_blank">
+            <img class="w-100" src="./assets/images/join-btn.png" alt="" />
+          </a>
+        </div>
+      </section>
+      <section class="enviroment">
+        <div class="title title-green text-white text-center">
+          <h2 class="fs-40px fw-heavy">友善環境行動</h2>
+          <h3 class="fs-20px fw-medium">Better Together, Green Together.</h3>
+        </div>
+        <div class="flex flex-col items-center px-70px cards mt-64px">
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded bg-white vegan"
+          >
+            <div class="flex">
+              <div class="logo">
+                <img src="/assets/images/vegan-logo.png" alt="" />
+              </div>
+              <div class="text">
+                <p class="fs-40px fw-bold">純素友好</p>
+                <p class="fs-20px text-gray">
+                  我們逐步擴大不含動物成分的純素產品
+                </p>
+              </div>
+            </div>
+            <img
+              class="pic d-none sm:block"
+              src="/assets/images/vegan.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded bg-white ocean"
+          >
+            <div class="flex">
+              <div class="logo">
+                <img src="/assets/images/ocean-friendly-logo.png" alt="" />
+              </div>
+              <div class="text">
+                <p class="fs-40px fw-bold">海洋友善</p>
+                <p class="fs-20px text-gray">
+                  我們的防曬霜採用對珊瑚礁<br />
+                  友好的成分以保護海洋生態
+                </p>
+              </div>
+            </div>
+            <img
+              class="pic d-none sm:block"
+              src="/assets/images/ocean-friendly.png"
+              alt=""
+            />
+          </div>
+          <div class="flex rounded bg-white peta">
+            <div class="logo">
+              <img src="/assets/images/peta.png" alt="" />
+            </div>
+            <div class="text">
+              <p class="fs-40px fw-bold">PeTA認證</p>
+              <p class="fs-20px text-gray">
+                INNISFREE於2024年2月1日獲得全球動物權利組織-PETA善待動物組織頒發的「跳躍兔子(Leaping
+                Bunny)」零殘忍標章。作為一個高效自然主義品牌，這項成就源自於我們在尊重生命的原則，長期探索如何為消費者提供無動物測試的安全產品。INNISFREE始終致力於積極反思，並推動生物倫理學和動物福利的進步發展。
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center justify-between rounded bg-white reduce"
+          >
+            <div class="text">
+              <p class="fs-40px fw-bold">減塑行動</p>
+              <p class="fs-20px text-gray">
+                我們增加使用易於分離和回收的材料，例如：無金屬壓頭，移除原有的金屬彈簧壓頭，無需拆卸作業即可分類回收；並將廢棄塑膠和玻璃再加工製成的再生原料，提高在產品容器的使用率。再生玻璃－部分產品採用回收再製容器，經篩選、加工工藝製成的回收玻璃製成產品瓶身。再生塑膠－部分產品採用30%回收再製的塑膠材料，將廢棄塑料再加工而成的再生塑膠瓶蓋。我們將持續開發，使用可重新填充的產品以實踐「減少塑料」的理念。
+              </p>
+            </div>
+            <img
+              class="pic d-none md:block"
+              src="/assets/images/reduce.png"
+              alt=""
+            />
+          </div>
+          <div class="flex items-center justify-between rounded bg-white reuse">
+            <div class="text">
+              <p class="fs-40px fw-bold">再生紙包材</p>
+              <p class="fs-20px text-gray">
+                INNISFREE透過使用FSC認證的環保紙張代替塑膠包裝，並使用大豆油的油墨代替揮發性油墨印刷，減少森林生態系統傷害。收到快遞盒後，請與我們一起將其單獨處理成紙製品，為拯救地球而努力！
+              </p>
+            </div>
+            <img
+              class="pic d-none md:block"
+              src="/assets/images/reuse.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="more">
+        <p class="text-center text-green fs-40px fw-heavy">More INNISFREE…</p>
+        <div class="flex fw-heavy">
+          <div class="href">
+            <a href="" target="_blank">
+              <span class="fs-34px text-white">About us</span><br />
+              <span>
+                <span class="fs-20px fw-medium text-white">品牌故事</span>
+                <img src="/assets/images/arrow.svg" alt="" />
+              </span>
+            </a>
+          </div>
+          <div class="href">
+            <a href="" target="_blank">
+              <span class="fs-34px text-white">Green Tea Heritage</span><br />
+              <span>
+                <span class="fs-20px fw-medium text-white">綠茶歷史</span>
+                <img src="./assets/images/arrow.svg" alt="" />
+              </span>
+            </a>
           </div>
         </div>
       </section>
@@ -441,14 +559,37 @@
     const bottleNumber = document.querySelector(".bottle-number");
     createOdometer(bottleNumber, 10698275);
 
-    const yearList = [2024, 2023, 2022, 2021, 2020, 2019];
-    const contentList = [
-      "INNISFREE夥伴們透過出演繪本《你很特別》改編的行動短劇，和小朋友一起學習撕掉社會標籤，真心喜歡獨一無二的自己。",
-      "暌違三年後，我們終於回到非營利幼兒園，與小朋友們一起帶動跳；INNISFREE購買了手指膏與小朋友們一起完成線稿上色！",
-      "疫情開始，沒有辦法親自前往幼兒園，雖然分隔兩地，但仍利用繪圖創作的方式參與慢飛兒童的聖誕！",
-      "疫情開始，沒有辦法親自前往幼兒園，雖然分隔兩地，但仍利用繪圖創作的方式參與慢飛兒童的聖誕！",
-      "合作第二年，我們手拉著手利用彩色筆在圖畫線搞上，與慢飛兒童們一起創作，並製作成聖誕年曆卡送給INNISFREE的消費者。",
-      "第一年前往非營利幼兒園與慢飛兒童相見時，園長播放這些孩子跟老師與家長互動的日常，讓我們感受到這些家庭難處，許多同事不由自主的流下淚水，更加深我們對於持續進行公益活動的意願。",
+    const stickyNotesContent = [
+      {
+        year: 2024,
+        content:
+          "INNISFREE夥伴們透過出演繪本《你很特別》改編的行動短劇，和小朋友一起學習撕掉社會標籤，真心喜歡獨一無二的自己。",
+      },
+      {
+        year: 2023,
+        content:
+          "暌違三年後，我們終於回到非營利幼兒園，與小朋友們一起帶動跳；INNISFREE購買了手指膏與小朋友們一起完成線稿上色！",
+      },
+      {
+        year: 2022,
+        content:
+          "疫情開始，沒有辦法親自前往幼兒園，雖然分隔兩地，但仍利用繪圖創作的方式參與慢飛兒童的聖誕！",
+      },
+      {
+        year: 2021,
+        content:
+          "疫情開始，沒有辦法親自前往幼兒園，雖然分隔兩地，但仍利用繪圖創作的方式參與慢飛兒童的聖誕！",
+      },
+      {
+        year: 2020,
+        content:
+          "合作第二年，我們手拉著手利用彩色筆在圖畫線搞上，與慢飛兒童們一起創作，並製作成聖誕年曆卡送給INNISFREE的消費者。",
+      },
+      {
+        year: 2019,
+        content:
+          "第一年前往非營利幼兒園與慢飛兒童相見時，園長播放這些孩子跟老師與家長互動的日常，讓我們感受到這些家庭難處，許多同事不由自主的流下淚水，更加深我們對於持續進行公益活動的意願。",
+      },
     ];
 
     const noteYear = document.querySelector(".sticky-notes .year");
@@ -460,13 +601,13 @@
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: (index, className) =>
-          `<span class="${className}"><div>${yearList[index]}</div></span>`,
+          `<span class="${className}"><div>${stickyNotesContent[index].year}</div></span>`,
       },
       grabCursor: true,
       on: {
         slideChange: function () {
-          noteYear.innerText = yearList[this.realIndex];
-          noteContent.innerText = contentList[this.realIndex];
+          noteYear.innerText = stickyNotesContent[this.realIndex].year;
+          noteContent.innerText = stickyNotesContent[this.realIndex].content;
         },
       },
     });
