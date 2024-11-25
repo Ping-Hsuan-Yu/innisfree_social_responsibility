@@ -509,6 +509,12 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
                 box-shadow: 3px 5px 8px 0px rgba(2, 65, 55, 0.26);
                 max-width: 429px;
             }
+            img {
+                position: absolute;
+                top: clampCalc(-24, 0);
+                left: clampCalc(24, 0);
+                width: clampCalc(51, 0);
+            }
         }
         .card {
             width: clampCalc(909, 0);
