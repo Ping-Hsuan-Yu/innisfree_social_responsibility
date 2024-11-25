@@ -96,6 +96,14 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     .mt-72px {
         margin-top: clampCalc(72, 0);
     }
+    .md\:mt-72px {
+        @media (min-width: 768px) {
+            margin-top: clampCalc(72, 0);
+        }
+    }
+    .mt-120px {
+        margin-top: clampCalc(120, 0);
+    }
     .px-36px {
         padding-left: clampCalc(36, 0);
         padding-right: clampCalc(36, 0);
@@ -463,10 +471,44 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             }
         }
         .video {
-            max-width: 558px;
+            max-width: 396px;
+            position: relative;
+            video {
+                clip-path: inset(0 round 30px);
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 89%;
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
         }
-        .paper {
-            max-width: 558px;
+        .flip-card {
+            position: relative;
+            @media (max-width: 640px) {
+                margin: 0 18px;
+            }
+            .background {
+                border-radius: 10px;
+                background-color: $primary-color;
+                box-shadow: 3px 5px 8px 0px rgba(2, 65, 55, 0.26);
+                transform: rotate(3.5deg) translate(5.5%, 4.2%);
+                max-width: 429px;
+                color: $primary-color;
+            }
+            .inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 10px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 3px 5px 8px 0px rgba(2, 65, 55, 0.26);
+                max-width: 429px;
+            }
         }
         .card {
             width: clampCalc(909, 0);
@@ -659,54 +701,103 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
                 max-width: 1117px;
                 width: 100%;
             }
+            @media (min-width: 768px) {
+            }
             .logo {
                 display: flex;
                 align-items: center;
+                width: clampCalc(300, 0);
                 justify-content: center;
-                width: clampCalc(270, 0);
+            }
+            .text {
+                line-height: 1.5;
             }
             .vegan,
             .ocean {
+                flex-direction: column-reverse;
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                }
+                .text {
+                    width: 100%;
+                    text-align: end;
+                    @media (min-width: 768px) {
+                        text-align: start;
+                    }
+                }
                 .pic {
-                    width: clampCalc(430, 0);
-                    border-radius: 0 clampCalc(10, 4) clampCalc(10, 4) 0;
+                    width: 100%;
+                    border-radius: clampCalc(10, 4) clampCalc(10, 4) 0 0;
+                    @media (min-width: 768px) {
+                        width: clampCalc(430, 0);
+                        border-radius: 0 clampCalc(10, 4) clampCalc(10, 4) 0;
+                    }
                 }
                 > .flex {
-                    padding: 26px 26px 26px 0;
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 1.5em;
+                    @media (min-width: 768px) {
+                        justify-content: start;
+                        padding: 26px 26px 26px 0;
+                    }
                 }
             }
             .vegan {
                 .logo img {
-                    width: clampCalc(152, 0);
+                    width: clampCalc(152, 91);
                 }
             }
             .ocean {
                 .logo img {
-                    width: clampCalc(139, 0);
+                    width: clampCalc(139, 83);
                 }
             }
             .peta {
-                padding: 26px 26px 26px 0;
+                flex-direction: column;
+                padding: 1.5em;
+                align-items: center;
                 .logo {
+                    width: 100%;
                     img {
-                        width: clampCalc(154, 0);
+                        width: 50%;
                     }
                 }
                 .text {
-                    width: clampCalc(821, 0);
-                }
-            }
-            .reduce,
-            .reuse {
-                .text {
-                    padding: 26px;
-                    @media (min-width: 768px) {
-                        padding-left: clampCalc(52, 0);
-                        padding-right: clampCalc(26, 0);
+                    p:nth-of-type(1) {
+                        text-align: end;
+                        margin-top: 1em;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: calc(100% - 5em);
+                            height: 1px;
+                            background-color: #5c5c5c80;
+                            top: 50%;
+                            left: 0;
+                        }
                     }
                 }
-                .pic {
-                    border-radius: 0 clampCalc(10, 4) clampCalc(10, 4) 0;
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    padding: 26px 26px 26px 0;
+                    .logo {
+                        width: clampCalc(206, 0);
+                        img {
+                            width: clampCalc(154, 0);
+                        }
+                    }
+                    .text {
+                        p:nth-of-type(1) {
+                            text-align: start;
+                            margin-top: 0;
+                            &::before {
+                                display: none;
+                            }
+                        }
+                        width: clampCalc(885, 0);
+                    }
                 }
             }
             .reduce {
@@ -717,6 +808,37 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             .reuse {
                 .pic {
                     width: clampCalc(444, 0);
+                }
+            }
+            .reduce,
+            .reuse {
+                flex-direction: column-reverse;
+                .text {
+                    padding: 0 1.5em 1.5em 1.5em;
+                    transform: translateY(-2.5em);
+                    p:nth-of-type(1) {
+                        text-align: end;
+                        margin-bottom: 0.5em;
+                    }
+                }
+                .pic.md\:d-none {
+                    width: 100%;
+                    border-radius: clampCalc(10, 4) clampCalc(10, 4) 0 0;
+                }
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    .text {
+                        transform: none;
+                        padding-left: clampCalc(52, 0);
+                        padding-right: clampCalc(26, 0);
+                        p:nth-of-type(1) {
+                            text-align: start;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .pic {
+                        border-radius: 0 clampCalc(10, 4) clampCalc(10, 4) 0;
+                    }
                 }
             }
         }

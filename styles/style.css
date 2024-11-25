@@ -80,6 +80,14 @@
 #social-responsibility .mt-72px {
   margin-top: clamp(0px, 5.625vw, 72px);
 }
+@media (min-width: 768px) {
+  #social-responsibility .md\:mt-72px {
+    margin-top: clamp(0px, 5.625vw, 72px);
+  }
+}
+#social-responsibility .mt-120px {
+  margin-top: clamp(0px, 9.375vw, 120px);
+}
 #social-responsibility .px-36px {
   padding-left: clamp(0px, 2.8125vw, 36px);
   padding-right: clamp(0px, 2.8125vw, 36px);
@@ -469,10 +477,49 @@
   margin: 24px 0 20px 0;
 }
 #social-responsibility .recycle .video {
-  max-width: 558px;
+  max-width: 396px;
+  position: relative;
 }
-#social-responsibility .recycle .paper {
-  max-width: 558px;
+#social-responsibility .recycle .video video {
+  -webkit-clip-path: inset(0 round 30px);
+          clip-path: inset(0 round 30px);
+}
+#social-responsibility .recycle .video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 89%;
+}
+@media (max-width: 768px) {
+  #social-responsibility .recycle .video img {
+    display: none;
+  }
+}
+#social-responsibility .recycle .flip-card {
+  position: relative;
+}
+@media (max-width: 640px) {
+  #social-responsibility .recycle .flip-card {
+    margin: 0 18px;
+  }
+}
+#social-responsibility .recycle .flip-card .background {
+  border-radius: 10px;
+  background-color: #00b65d;
+  box-shadow: 3px 5px 8px 0px rgba(2, 65, 55, 0.26);
+  transform: rotate(3.5deg) translate(5.5%, 4.2%);
+  max-width: 429px;
+  color: #00b65d;
+}
+#social-responsibility .recycle .flip-card .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 5px 8px 0px rgba(2, 65, 55, 0.26);
+  max-width: 429px;
 }
 #social-responsibility .recycle .card {
   width: clamp(0px, 71.015625vw, 909px);
@@ -677,53 +724,156 @@
 #social-responsibility .environment .cards .logo {
   display: flex;
   align-items: center;
+  width: clamp(0px, 23.4375vw, 300px);
   justify-content: center;
-  width: clamp(0px, 21.09375vw, 270px);
+}
+#social-responsibility .environment .cards .text {
+  line-height: 1.5;
+}
+#social-responsibility .environment .cards .vegan,
+#social-responsibility .environment .cards .ocean {
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  #social-responsibility .environment .cards .vegan,
+  #social-responsibility .environment .cards .ocean {
+    flex-direction: row;
+  }
+}
+#social-responsibility .environment .cards .vegan .text,
+#social-responsibility .environment .cards .ocean .text {
+  width: 100%;
+  text-align: end;
+}
+@media (min-width: 768px) {
+  #social-responsibility .environment .cards .vegan .text,
+  #social-responsibility .environment .cards .ocean .text {
+    text-align: start;
+  }
 }
 #social-responsibility .environment .cards .vegan .pic,
 #social-responsibility .environment .cards .ocean .pic {
-  width: clamp(0px, 33.59375vw, 430px);
-  border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
+  width: 100%;
+  border-radius: clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0 0;
+}
+@media (min-width: 768px) {
+  #social-responsibility .environment .cards .vegan .pic,
+  #social-responsibility .environment .cards .ocean .pic {
+    width: clamp(0px, 33.59375vw, 430px);
+    border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
+  }
 }
 #social-responsibility .environment .cards .vegan > .flex,
 #social-responsibility .environment .cards .ocean > .flex {
-  padding: 26px 26px 26px 0;
-}
-#social-responsibility .environment .cards .vegan .logo img {
-  width: clamp(0px, 11.875vw, 152px);
-}
-#social-responsibility .environment .cards .ocean .logo img {
-  width: clamp(0px, 10.859375vw, 139px);
-}
-#social-responsibility .environment .cards .peta {
-  padding: 26px 26px 26px 0;
-}
-#social-responsibility .environment .cards .peta .logo img {
-  width: clamp(0px, 12.03125vw, 154px);
-}
-#social-responsibility .environment .cards .peta .text {
-  width: clamp(0px, 64.140625vw, 821px);
-}
-#social-responsibility .environment .cards .reduce .text,
-#social-responsibility .environment .cards .reuse .text {
-  padding: 26px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.5em;
 }
 @media (min-width: 768px) {
-  #social-responsibility .environment .cards .reduce .text,
-  #social-responsibility .environment .cards .reuse .text {
-    padding-left: clamp(0px, 4.0625vw, 52px);
-    padding-right: clamp(0px, 2.03125vw, 26px);
+  #social-responsibility .environment .cards .vegan > .flex,
+  #social-responsibility .environment .cards .ocean > .flex {
+    justify-content: start;
+    padding: 26px 26px 26px 0;
   }
 }
-#social-responsibility .environment .cards .reduce .pic,
-#social-responsibility .environment .cards .reuse .pic {
-  border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
+#social-responsibility .environment .cards .vegan .logo img {
+  width: clamp(91px, 11.875vw, 152px);
+}
+#social-responsibility .environment .cards .ocean .logo img {
+  width: clamp(83px, 10.859375vw, 139px);
+}
+#social-responsibility .environment .cards .peta {
+  flex-direction: column;
+  padding: 1.5em;
+  align-items: center;
+}
+#social-responsibility .environment .cards .peta .logo {
+  width: 100%;
+}
+#social-responsibility .environment .cards .peta .logo img {
+  width: 50%;
+}
+#social-responsibility .environment .cards .peta .text p:nth-of-type(1) {
+  text-align: end;
+  margin-top: 1em;
+  position: relative;
+}
+#social-responsibility .environment .cards .peta .text p:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 5em);
+  height: 1px;
+  background-color: rgba(92, 92, 92, 0.5019607843);
+  top: 50%;
+  left: 0;
+}
+@media (min-width: 768px) {
+  #social-responsibility .environment .cards .peta {
+    flex-direction: row;
+    padding: 26px 26px 26px 0;
+  }
+  #social-responsibility .environment .cards .peta .logo {
+    width: clamp(0px, 16.09375vw, 206px);
+  }
+  #social-responsibility .environment .cards .peta .logo img {
+    width: clamp(0px, 12.03125vw, 154px);
+  }
+  #social-responsibility .environment .cards .peta .text {
+    width: clamp(0px, 69.140625vw, 885px);
+  }
+  #social-responsibility .environment .cards .peta .text p:nth-of-type(1) {
+    text-align: start;
+    margin-top: 0;
+  }
+  #social-responsibility .environment .cards .peta .text p:nth-of-type(1)::before {
+    display: none;
+  }
 }
 #social-responsibility .environment .cards .reduce .pic {
   width: clamp(0px, 36.25vw, 464px);
 }
 #social-responsibility .environment .cards .reuse .pic {
   width: clamp(0px, 34.6875vw, 444px);
+}
+#social-responsibility .environment .cards .reduce,
+#social-responsibility .environment .cards .reuse {
+  flex-direction: column-reverse;
+}
+#social-responsibility .environment .cards .reduce .text,
+#social-responsibility .environment .cards .reuse .text {
+  padding: 0 1.5em 1.5em 1.5em;
+  transform: translateY(-2.5em);
+}
+#social-responsibility .environment .cards .reduce .text p:nth-of-type(1),
+#social-responsibility .environment .cards .reuse .text p:nth-of-type(1) {
+  text-align: end;
+  margin-bottom: 0.5em;
+}
+#social-responsibility .environment .cards .reduce .pic.md\:d-none,
+#social-responsibility .environment .cards .reuse .pic.md\:d-none {
+  width: 100%;
+  border-radius: clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0 0;
+}
+@media (min-width: 768px) {
+  #social-responsibility .environment .cards .reduce,
+  #social-responsibility .environment .cards .reuse {
+    flex-direction: row;
+  }
+  #social-responsibility .environment .cards .reduce .text,
+  #social-responsibility .environment .cards .reuse .text {
+    transform: none;
+    padding-left: clamp(0px, 4.0625vw, 52px);
+    padding-right: clamp(0px, 2.03125vw, 26px);
+  }
+  #social-responsibility .environment .cards .reduce .text p:nth-of-type(1),
+  #social-responsibility .environment .cards .reuse .text p:nth-of-type(1) {
+    text-align: start;
+    margin-bottom: 0;
+  }
+  #social-responsibility .environment .cards .reduce .pic,
+  #social-responsibility .environment .cards .reuse .pic {
+    border-radius: 0 clamp(4px, 0.78125vw, 10px) clamp(4px, 0.78125vw, 10px) 0;
+  }
 }
 #social-responsibility .more {
   padding-bottom: clamp(0px, 2.8125vw, 36px);
