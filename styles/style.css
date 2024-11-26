@@ -203,6 +203,9 @@
   padding: 5.46875vw;
   height: 100dvh;
 }
+#social-responsibility .header p {
+  text-shadow: 2px 3px 4px rgba(16, 16, 16, 0.5);
+}
 #social-responsibility .paper {
   background-color: rgb(255, 255, 255);
   box-shadow: 3px 5px 3px 0px rgba(0, 182, 93, 0.19);

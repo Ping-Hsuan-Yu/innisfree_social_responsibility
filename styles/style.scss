@@ -218,6 +218,9 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
         background-size: cover;
         padding: 5.46875vw;
         height: 100dvh;
+        p {
+            text-shadow: 2px 3px 4px rgba(16, 16, 16, 0.5);
+        }
     }
     .paper {
         background-color: rgb(255, 255, 255);
