@@ -19,7 +19,9 @@ $primary-color: #00b65d;
 $primary-color-dark: #004e31;
 $background-color: #dff1e0;
 $Noto-Sans-TC: "Noto Sans TC", sans-serif;
-
+html {
+    scroll-behavior: smooth;
+}
 #social-responsibility {
     line-height: initial;
     font-family: $Noto-Sans-TC;
@@ -212,14 +214,42 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
     }
     .header {
         display: flex;
-        background-image: url("../assets/images/header-bg.png");
+        position: relative;
+        background-image: url("../assets/images/header-bg.webp");
         background-repeat: no-repeat;
         background-position: bottom right;
         background-size: cover;
-        padding: 5.46875vw;
-        height: 100dvh;
+        padding: 11vw 5.46875vw;
+        height: calc(100dvh + 6vw);
+
         p {
             text-shadow: 2px 3px 4px rgba(16, 16, 16, 0.5);
+        }
+        .tabs {
+            width: 100%;
+            justify-content: center;
+            padding-top: 3vw;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+            a {
+                white-space: nowrap;
+                padding: 0.6em 2em;
+                margin: 0 0.1em;
+                background-color: $primary-color-dark;
+                border: 1px white solid;
+                border-bottom: 0;
+                border-radius: 1em 1em 0 0;
+                @media (max-width: 640px) {
+                    padding: 0.4em 1em;
+                    font-size: 10px;
+                }
+            }
+            a:nth-of-type(3) {
+                background-color: #f67d01;
+            }
         }
     }
     .paper {
@@ -266,10 +296,10 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
         background-size: cover;
     }
     .title.title-green {
-        background-image: url("../assets/images/green-shield.png");
+        background-image: url("../assets/images/green-shield.webp");
     }
     .title.title-orange {
-        background-image: url("../assets/images/orange-shield.png");
+        background-image: url("../assets/images/orange-shield.webp");
     }
     .card {
         background-color: $primary-color;
@@ -665,7 +695,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             }
         }
         .swiper-pagination-bullet {
-            background-image: url("../assets/images/heart.png");
+            background-image: url("../assets/images/heart.webp");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
@@ -688,7 +718,7 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             }
         }
         .swiper-pagination-bullet-active {
-            background-image: url("../assets/images/heart-active.png");
+            background-image: url("../assets/images/heart-active.webp");
             width: clampCalc(43, 0);
             height: clampCalc(39, 0);
             --swiper-pagination-color: transparent;
@@ -863,10 +893,10 @@ $Noto-Sans-TC: "Noto Sans TC", sans-serif;
             gap: 4px;
             justify-content: center;
             .href:first-of-type {
-                background-image: url("../assets/images/about-us.png");
+                background-image: url("../assets/images/about-us.webp");
             }
             .href:last-of-type {
-                background-image: url("../assets/images/green-tea-heritage.png");
+                background-image: url("../assets/images/green-tea-heritage.webp");
             }
         }
         .href {
